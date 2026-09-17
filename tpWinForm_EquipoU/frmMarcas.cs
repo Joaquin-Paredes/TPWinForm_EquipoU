@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace tpWinForm_EquipoU
 {
-    public partial class frmPrincipal : Form
+    public partial class frmMarcas : Form
     {
-        public frmPrincipal()
+        public frmMarcas()
         {
             InitializeComponent();
+        }
+
+        private void lblDescripcion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
