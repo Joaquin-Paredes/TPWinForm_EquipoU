@@ -81,6 +81,7 @@
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // txbDescripcion
             // 
@@ -112,7 +113,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvMarcas);
             this.Name = "frmMarcas";
-            this.Text = "frmMarcas";
+            this.Text = "Marcas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

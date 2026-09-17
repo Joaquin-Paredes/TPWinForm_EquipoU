@@ -16,5 +16,28 @@ namespace tpWinForm_EquipoU
         {
             InitializeComponent();
         }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            frmArticulos ventana = new frmArticulos();
+            ventana.ShowDialog();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            frmMarcas ventana = new frmMarcas();
+            ventana.ShowDialog();
+        }
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategorias ventana = new frmCategorias();
+            ventana.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

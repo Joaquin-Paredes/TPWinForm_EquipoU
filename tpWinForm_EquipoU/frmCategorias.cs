@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace tpWinForm_EquipoU
 {
-    public partial class frmMarcas : Form
+    public partial class frmCategorias : Form
     {
-        public frmMarcas()
+        public frmCategorias()
         {
             InitializeComponent();
-        }
-
-        private void lblDescripcion_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
