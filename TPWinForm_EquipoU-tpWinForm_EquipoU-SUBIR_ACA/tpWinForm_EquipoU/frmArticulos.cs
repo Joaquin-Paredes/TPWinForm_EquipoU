@@ -20,6 +20,28 @@ namespace tpWinForm_EquipoU
         private void frmArticulos_Load(object sender, EventArgs e)
         {
             cargarGrid();
+
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            try
+            {
+                // Recorremos la lista y agregamos cada marca a mano
+                foreach (Marca item in marcaNegocio.listar())
+                {
+                    cboMarca.Items.Add(item);
+                }
+
+                // Hacemos lo mismo con las categorías
+                foreach (Categoria item in categoriaNegocio.listar())
+                {
+                    cboCategoria.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargarGrid()
@@ -99,9 +121,26 @@ namespace tpWinForm_EquipoU
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                dgvArticulos.DataSource = negocio.filtrar(txtCodigo.Text, txtNombre.Text);
 
-                // Ocultamos los IDs para mantener la prolijidad
+                int idMarca = -1;
+                if (cboMarca.SelectedItem != null)
+                {
+                    Marca marcaSel = (Marca)cboMarca.SelectedItem;
+                    idMarca = marcaSel.Id;
+                }
+
+
+                int idCategoria = -1;
+                if (cboCategoria.SelectedItem != null)
+                {
+                    Categoria categoriaSel = (Categoria)cboCategoria.SelectedItem;
+                    idCategoria = categoriaSel.Id;
+                }
+
+
+                dgvArticulos.DataSource = negocio.filtrar(txtCodigo.Text, txtNombre.Text, idMarca, idCategoria);
+
+
                 dgvArticulos.Columns["Id"].Visible = false;
                 dgvArticulos.Columns["IdMarca"].Visible = false;
                 dgvArticulos.Columns["IdCategoria"].Visible = false;
@@ -112,4 +151,4 @@ namespace tpWinForm_EquipoU
             }
         }
     }
-    }
+}

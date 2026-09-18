@@ -48,53 +48,63 @@ namespace tpWinForm_EquipoU
             }
         }
 
-        public List<Articulo> filtrar(string codigo, string nombre)
+        public List<Articulo> filtrar(string codigo, string nombre, int idMarca, int idCategoria)
         {
-            List<Articulo> lista = new List<Articulo>();
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, I.ImagenUrl, A.IdMarca, A.IdCategoria, A.Precio FROM ARTICULOS A LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo WHERE 1 = 1";
+List<Articulo> lista = new List<Articulo>();
+    AccesoDatos datos = new AccesoDatos();
+    try
+    {
+        string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, I.ImagenUrl, A.IdMarca, A.IdCategoria, A.Precio FROM ARTICULOS A LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo WHERE 1 = 1";
 
-                if (!string.IsNullOrEmpty(codigo))
-                {
-                    consulta += " AND A.Codigo LIKE '%" + codigo + "%'";
-                }
-                if (!string.IsNullOrEmpty(nombre))
-                {
-                    consulta += " AND A.Nombre LIKE '%" + nombre + "%'";
-                }
+        if (!string.IsNullOrEmpty(codigo))
+        {
+            consulta += " AND A.Codigo LIKE '%" + codigo + "%'";
+        }
+        if (!string.IsNullOrEmpty(nombre))
+        {
+            consulta += " AND A.Nombre LIKE '%" + nombre + "%'";
+        }
+        
+        // Agregamos los filtros de los ComboBox
+        if (idMarca != -1)
+        {
+            consulta += " AND A.IdMarca = " + idMarca;
+        }
+        if (idCategoria != -1)
+        {
+            consulta += " AND A.IdCategoria = " + idCategoria;
+        }
 
-                datos.setearConsulta(consulta);
-                datos.ejecutarLectura();
+        datos.setearConsulta(consulta);
+        datos.ejecutarLectura();
 
-                while (datos.Lector.Read())
-                {
-                    Articulo aux = new Articulo();
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Codigo = (string)datos.Lector["Codigo"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.IdMarca = (int)datos.Lector["IdMarca"];
-                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
-                    aux.Precio = (decimal)datos.Lector["Precio"];
+        while (datos.Lector.Read())
+        {
+            Articulo aux = new Articulo();
+            aux.Id = (int)datos.Lector["Id"];
+            aux.Codigo = (string)datos.Lector["Codigo"];
+            aux.Nombre = (string)datos.Lector["Nombre"];
+            aux.Descripcion = (string)datos.Lector["Descripcion"];
+            aux.IdMarca = (int)datos.Lector["IdMarca"];
+            aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+            aux.Precio = (decimal)datos.Lector["Precio"];
 
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+            if (!(datos.Lector["ImagenUrl"] is DBNull))
+                aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
 
-                    lista.Add(aux);
-                }
+            lista.Add(aux);
+        }
 
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
+        return lista;
+    }
+    catch (Exception ex)
+    {
+        throw ex;
+    }
+    finally
+    {
+        datos.cerrarConexion();
+    }
         }
     }
 }

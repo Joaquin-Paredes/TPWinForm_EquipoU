@@ -12,3 +12,16 @@ C:\Users\topo\Desktop\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_Eq
 C:\Users\topo\Desktop\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.exe
 C:\Users\topo\Desktop\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.pdb
 C:\Users\topo\Desktop\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.exe.config
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\bin\Debug\tpWinForm_EquipoU.exe.config
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\bin\Debug\tpWinForm_EquipoU.exe
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\bin\Debug\tpWinForm_EquipoU.pdb
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.csproj.AssemblyReference.cache
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmArticulos.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmCategorias.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmMarcas.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmPrincipal.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.Properties.Resources.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.csproj.GenerateResource.cache
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.csproj.CoreCompileInputs.cache
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.exe
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.pdb

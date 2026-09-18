@@ -10,5 +10,10 @@ namespace tpWinForm_EquipoU
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion; // Le decimos que cuando se muestre como texto, imprima la descripción
+        }
     }
 }
