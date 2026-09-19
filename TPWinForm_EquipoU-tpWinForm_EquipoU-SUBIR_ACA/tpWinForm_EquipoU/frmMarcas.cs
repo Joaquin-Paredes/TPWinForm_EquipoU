@@ -22,6 +22,30 @@ namespace tpWinForm_EquipoU
 
         }
 
+        
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+           
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                dgvMarcas.DataSource = null;
+                return;
+            }
+
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                dgvMarcas.DataSource = negocio.buscarPorDescripcionArticulo(txtDescripcion.Text.Trim());
+
+                dgvMarcas.Columns["Id"].Visible = false;
+                dgvMarcas.Columns["Descripcion"].HeaderText = "Marca";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();

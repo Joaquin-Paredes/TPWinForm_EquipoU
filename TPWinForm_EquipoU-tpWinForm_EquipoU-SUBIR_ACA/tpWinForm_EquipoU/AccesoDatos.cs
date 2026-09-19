@@ -20,7 +20,7 @@ namespace tpWinForm_EquipoU
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("Server=localhost,1433; Database=CATALOGO_P3_DB; User Id=sa; Password=Aquiles202;");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 
