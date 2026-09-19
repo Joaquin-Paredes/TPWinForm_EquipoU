@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txbDescripcion = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDescripcion
@@ -47,12 +47,13 @@
             this.lblDescripcion.TabIndex = 13;
             this.lblDescripcion.Text = "Descripcion:";
             // 
-            // txbDescripcion
+            // txtDescripcion
             // 
-            this.txbDescripcion.Location = new System.Drawing.Point(141, 56);
-            this.txbDescripcion.Name = "txbDescripcion";
-            this.txbDescripcion.Size = new System.Drawing.Size(278, 20);
-            this.txbDescripcion.TabIndex = 12;
+            this.txtDescripcion.Location = new System.Drawing.Point(141, 56);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(278, 20);
+            this.txtDescripcion.TabIndex = 12;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // btnVolver
             // 
@@ -91,13 +92,13 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dgvMarcas
+            // dgvCategorias
             // 
-            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(47, 152);
-            this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.Size = new System.Drawing.Size(406, 149);
-            this.dgvMarcas.TabIndex = 7;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(47, 152);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.Size = new System.Drawing.Size(406, 149);
+            this.dgvCategorias.TabIndex = 7;
             // 
             // frmCategorias
             // 
@@ -105,15 +106,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 400);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.txbDescripcion);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvMarcas);
+            this.Controls.Add(this.dgvCategorias);
             this.Name = "frmCategorias";
             this.Text = "Categorias";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,11 +123,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox txbDescripcion;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.DataGridView dgvCategorias;
     }
 }

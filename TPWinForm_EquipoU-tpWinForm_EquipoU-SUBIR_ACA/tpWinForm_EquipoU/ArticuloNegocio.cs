@@ -65,7 +65,7 @@ List<Articulo> lista = new List<Articulo>();
             consulta += " AND A.Nombre LIKE '%" + nombre + "%'";
         }
         
-        // Agregamos los filtros de los ComboBox
+      
         if (idMarca != -1)
         {
             consulta += " AND A.IdMarca = " + idMarca;

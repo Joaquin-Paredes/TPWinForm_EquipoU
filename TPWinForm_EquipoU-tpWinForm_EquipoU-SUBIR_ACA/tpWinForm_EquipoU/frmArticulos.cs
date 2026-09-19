@@ -26,13 +26,13 @@ namespace tpWinForm_EquipoU
 
             try
             {
-                // Recorremos la lista y agregamos cada marca a mano
+         
                 foreach (Marca item in marcaNegocio.listar())
                 {
                     cboMarca.Items.Add(item);
                 }
 
-                // Hacemos lo mismo con las categorías
+   
                 foreach (Categoria item in categoriaNegocio.listar())
                 {
                     cboCategoria.Items.Add(item);
@@ -51,7 +51,7 @@ namespace tpWinForm_EquipoU
             {
                 dgvArticulos.DataSource = negocio.listar();
 
-                // Ocultamos las columnas de IDs para que quede limpio
+          
                 dgvArticulos.Columns["Id"].Visible = false;
                 dgvArticulos.Columns["IdMarca"].Visible = false;
                 dgvArticulos.Columns["IdCategoria"].Visible = false;

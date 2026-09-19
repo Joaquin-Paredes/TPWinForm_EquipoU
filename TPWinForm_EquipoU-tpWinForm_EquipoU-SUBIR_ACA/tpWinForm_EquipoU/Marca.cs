@@ -13,7 +13,7 @@ namespace tpWinForm_EquipoU
 
         public override string ToString()
         {
-            return Descripcion; // Le decimos que cuando se muestre como texto, imprima la descripción
+            return Descripcion; 
         }
     }
 }

@@ -17,6 +17,28 @@ namespace tpWinForm_EquipoU
             InitializeComponent();
         }
 
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                dgvCategorias.DataSource = null;
+                return;
+            }
+
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            try
+            {
+                dgvCategorias.DataSource = negocio.buscarPorDescripcionArticulo(txtDescripcion.Text.Trim());
+
+                dgvCategorias.Columns["Id"].Visible = false;
+                dgvCategorias.Columns["Descripcion"].HeaderText = "Categoría";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
