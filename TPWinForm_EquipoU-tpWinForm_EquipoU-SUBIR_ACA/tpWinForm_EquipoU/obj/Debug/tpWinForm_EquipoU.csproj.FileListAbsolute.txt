@@ -25,3 +25,6 @@ C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_Equi
 C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.csproj.CoreCompileInputs.cache
 C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.exe
 C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.pdb
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmAltaArticulo.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmAltaMarca.resources
+C:\Users\jpwalls\source\repos\TPWinForm_EquipoU\TPWinForm_EquipoU-tpWinForm_EquipoU-SUBIR_ACA\tpWinForm_EquipoU\obj\Debug\tpWinForm_EquipoU.frmAltaCategoria.resources

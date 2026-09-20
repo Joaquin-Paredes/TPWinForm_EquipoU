@@ -26,7 +26,9 @@ namespace tpWinForm_EquipoU
 
             try
             {
-         
+                cboMarca.Items.Clear();
+                cboCategoria.Items.Clear();
+
                 foreach (Marca item in marcaNegocio.listar())
                 {
                     cboMarca.Items.Add(item);
@@ -93,7 +95,22 @@ namespace tpWinForm_EquipoU
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+           
+            if (dgvArticulos.CurrentRow != null)
+            {
+               
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
+        
+                frmAltaArticulo ventanaModificar = new frmAltaArticulo(seleccionado);
+                ventanaModificar.ShowDialog();
+
+                cargarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un artículo de la lista para modificar.");
+            }
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
@@ -150,5 +167,59 @@ namespace tpWinForm_EquipoU
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog();
+            cargarGrid();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+               
+                if (dgvArticulos.CurrentRow != null)
+                {
+                    
+                    
+                        seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                        negocio.eliminar(seleccionado.Id);
+
+                      
+                        cargarGrid();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un artículo de la lista para eliminar.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.ToString());
+            }
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+               
+                frmAltaArticulo ventanaDetalle = new frmAltaArticulo(seleccionado, true);
+                ventanaDetalle.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un artículo de la lista para ver el detalle.");
+            }
+        }
     }
+    
 }

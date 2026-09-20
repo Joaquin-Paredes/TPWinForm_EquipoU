@@ -96,7 +96,11 @@
             this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnArticulos);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(531, 169);
+            this.MinimumSize = new System.Drawing.Size(531, 169);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal (menu)";
             this.ResumeLayout(false);
             this.PerformLayout();

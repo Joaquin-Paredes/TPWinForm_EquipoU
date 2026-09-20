@@ -14,7 +14,7 @@ namespace tpWinForm_EquipoU
             AccesoDatos datos = new AccesoDatos();
 
             try
-            {
+            { 
                 datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
                 datos.ejecutarLectura();
 
@@ -26,6 +26,7 @@ namespace tpWinForm_EquipoU
 
                     lista.Add(aux);
                 }
+
                 return lista;
             }
             catch (Exception ex)
@@ -58,6 +59,63 @@ namespace tpWinForm_EquipoU
                     lista.Add(aux);
                 }
                 return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void agregar(Marca nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO MARCAS (Descripcion) VALUES (@descripcion)");
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Marca marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE MARCAS SET Descripcion = @descripcion WHERE Id = @id");
+                datos.setearParametro("@descripcion", marca.Descripcion);
+                datos.setearParametro("@id", marca.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {

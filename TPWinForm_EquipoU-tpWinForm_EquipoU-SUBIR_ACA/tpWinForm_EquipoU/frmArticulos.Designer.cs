@@ -50,9 +50,12 @@
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(2, 112);
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.Size = new System.Drawing.Size(387, 239);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
@@ -66,6 +69,7 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -85,6 +89,7 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalle
             // 
@@ -94,10 +99,11 @@
             this.btnDetalle.TabIndex = 1;
             this.btnDetalle.Text = "Detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(403, 357);
+            this.btnVolver.Location = new System.Drawing.Point(364, 357);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(81, 23);
             this.btnVolver.TabIndex = 1;
@@ -187,9 +193,11 @@
             // 
             // pbxArticulo
             // 
+            this.pbxArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxArticulo.Location = new System.Drawing.Point(463, 112);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(290, 239);
+            this.pbxArticulo.Size = new System.Drawing.Size(262, 239);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 10;
             this.pbxArticulo.TabStop = false;
             // 
@@ -214,7 +222,12 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvArticulos);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(807, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(807, 489);
             this.Name = "frmArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.frmArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

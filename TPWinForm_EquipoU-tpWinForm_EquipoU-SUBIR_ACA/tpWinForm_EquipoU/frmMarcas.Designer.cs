@@ -38,7 +38,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(27, 74);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(65, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Descripcion:";
             this.lblDescripcion.Click += new System.EventHandler(this.lblDescripcion_Click);
@@ -74,6 +74,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -83,6 +84,7 @@
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -92,6 +94,7 @@
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
@@ -115,9 +118,14 @@
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(452, 431);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(452, 431);
             this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Marcas";
+            this.Load += new System.EventHandler(this.frmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

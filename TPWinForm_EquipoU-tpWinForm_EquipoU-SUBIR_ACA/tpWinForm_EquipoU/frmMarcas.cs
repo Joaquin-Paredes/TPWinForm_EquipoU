@@ -16,7 +16,27 @@ namespace tpWinForm_EquipoU
         {
             InitializeComponent();
         }
+        private void frmMarcas_Load(object sender, EventArgs e)
+        {
+            cargarGrid();
+        }
 
+        private void cargarGrid()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                dgvMarcas.DataSource = negocio.listar();
+
+              
+                if (dgvMarcas.Columns["Id"] != null)
+                    dgvMarcas.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar marcas: " + ex.ToString());
+            }
+        }
         private void lblDescripcion_Click(object sender, EventArgs e)
         {
 
@@ -49,6 +69,51 @@ namespace tpWinForm_EquipoU
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaMarca alta = new frmAltaMarca();
+            alta.ShowDialog();
+            cargarGrid();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvMarcas.CurrentRow != null)
+            {
+                Marca seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+
+                frmAltaMarca modificar = new frmAltaMarca(seleccionado);
+                modificar.ShowDialog();
+                cargarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una marca de la lista.");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                if (dgvMarcas.CurrentRow != null)
+                {
+                    Marca seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargarGrid();  
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una marca para eliminar.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.ToString());
+            }
         }
     }
 }

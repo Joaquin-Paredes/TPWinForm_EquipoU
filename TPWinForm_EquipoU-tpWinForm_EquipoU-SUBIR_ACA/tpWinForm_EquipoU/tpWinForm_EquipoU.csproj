@@ -51,11 +51,23 @@
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaNegocio.cs" />
-    <Compile Include="frmAltaArtículo.cs">
+    <Compile Include="frmAltaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaArtículo.Designer.cs">
-      <DependentUpon>frmAltaArtículo.cs</DependentUpon>
+    <Compile Include="frmAltaArticulo.Designer.cs">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaCategoria.Designer.cs">
+      <DependentUpon>frmAltaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaMarca.Designer.cs">
+      <DependentUpon>frmAltaMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,15 @@
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAltaArticulo.resx">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaCategoria.resx">
+      <DependentUpon>frmAltaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaMarca.resx">
+      <DependentUpon>frmAltaMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArticulos.resx">
       <DependentUpon>frmArticulos.cs</DependentUpon>
     </EmbeddedResource>
